@@ -5,7 +5,7 @@
   <title>Quarterly Earnings — Interactive Deck</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- RevealJS core + themes (CDN) -->
+  <!-- RevealJS core + themes -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
 
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
 
   <style>
+    html, body { height: 100%; margin: 0; }
     .email { font-size: 0.9em; opacity: 0.8; }
   </style>
 </head>
@@ -39,7 +40,7 @@
         </textarea>
       </section>
 
-      <!-- Fragments -->
+      <!-- Animated bullet reveals -->
       <section>
         <h2>Drivers of Growth</h2>
         <ul>
@@ -61,31 +62,33 @@ print((growth * 100).round(2).astype(str) + '%')
         </code></pre>
       </section>
 
-      <!-- Math -->
+      <!-- Math slide -->
       <section>
         <h2>Financial Formula</h2>
         <p>Weighted Average Cost of Capital (WACC):</p>
-        <p>\\[
+        <p>
+          \[
           \mathrm{WACC} = \frac{E}{V} \cdot R_e \;+\; \frac{D}{V} \cdot R_d \cdot (1 - T)
-        \\]</p>
+          \]
+        </p>
       </section>
 
     </div>
   </div>
 
-  <!-- Load RevealJS as ES module -->
-  <script type="module">
-    import Reveal from "https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.esm.js";
-    import Markdown from "https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.esm.js";
-    import Highlight from "https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.esm.js";
-    import Notes from "https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.esm.js";
-    import Math from "https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.esm.js";
+  <!-- RevealJS + Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
 
+  <script>
     Reveal.initialize({
       hash: true,
       slideNumber: true,
-      transition: 'slide',
-      plugins: [ Markdown, Highlight, Notes, Math.KaTeX ]
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+      transition: 'slide'
     });
   </script>
 </body>
