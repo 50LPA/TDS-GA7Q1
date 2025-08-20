@@ -2,153 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>TDS GA7Q1 — Quarterly Earnings</title>
+  <title>TDS GA7Q1 Presentation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- include email in metadata for extra verification -->
-  <meta name="author" content="24f1002855@ds.study.iitm.ac.in">
 
-  <!-- RevealJS core + theme (CDN) -->
+  <!-- RevealJS core + theme (from CDN) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
 
   <!-- Code highlighting -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
-
-  <!-- KaTeX for math rendering -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-
-  <style>
-    html, body { height: 100%; margin: 0; }
-    .email { font-size: 0.95em; opacity: 0.9; margin-top: 0.25rem; }
-    footer.reveal-footer {
-      position: fixed;
-      bottom: 8px;
-      right: 16px;
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.75);
-    }
-    /* improve code block visibility on dark theme */
-    .reveal code { font-size: 0.95rem; }
-  </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
-      <!-- Title slide - email visible here -->
+      <!-- Title slide -->
       <section>
-        <h1>Quarterly Earnings Report</h1>
-        <p class="email">Contact: <strong>24f1002855@ds.study.iitm.ac.in</strong></p>
-        <p><small>Published on GitHub Pages: https://50lpa.github.io/TDS-GA7Q1/</small></p>
+        <h1>TDS GA7Q1</h1>
+        <p>Email: <strong>24f1002855@ds.study.iitm.ac.in</strong></p>
         <aside class="notes">
-          Welcome stakeholders — quick intro. Mention the contact email shown on the slide.
+          Introduce yourself and mention this is the quarterly earnings report using RevealJS.
         </aside>
       </section>
 
-      <!-- Markdown slide (written in Markdown) -->
+      <!-- Markdown example -->
       <section data-markdown>
         <textarea data-template>
-### Highlights (Markdown)
-- Revenue up **12%** YoY
-- Net Income margin improved to **18%**
-- Cloud ARR grew to **$1.2B**
-
-> Notes: emphasize recurring revenue and ARR growth.
+### Features
+- Easy to maintain in Git
+- Convertible to PDF, PPT, HTML
+- Uses **Reveal.js**
         </textarea>
+      </section>
+
+      <!-- Fragments animation -->
+      <section>
+        <h2>Quarterly Highlights</h2>
+        <p class="fragment">Revenue Growth: +15%</p>
+        <p class="fragment">Expenses Reduced: -8%</p>
+        <p class="fragment">Net Profit: +20%</p>
         <aside class="notes">
-          Use this slide to call out three headlines; prompt for questions after each bullet.
+          Reveal each financial highlight one by one to keep audience engaged.
         </aside>
       </section>
 
-      <!-- Fragments (animated reveals) -->
+      <!-- Code Sample with highlighting -->
       <section>
-        <h2>Drivers of Growth</h2>
-        <ul>
-          <li class="fragment">Pricing optimization</li>
-          <li class="fragment">Operational efficiency</li>
-          <li class="fragment">New product adoption</li>
-        </ul>
-        <aside class="notes">
-          Reveal bullets one at a time to control pacing.
-        </aside>
-      </section>
-
-      <!-- Code sample with syntax highlighting -->
-      <section>
-        <h2>Forecast Snippet (Python)</h2>
+        <h2>Code Sample</h2>
         <pre><code class="language-python">
-import pandas as pd
-
-rev = pd.Series([1025, 1080, 1145, 1218], index=['Q1','Q2','Q3','Q4'])
-growth = rev.pct_change().fillna(0)
-print((growth * 100).round(2).astype(str) + '%')
+def compound_interest(principal, rate, time):
+    return principal * (1 + rate)**time
+print(compound_interest(1000, 0.05, 5))
         </code></pre>
-        <aside class="notes">
-          Run this live to show quarter-over-quarter growth. Keep code short.
-        </aside>
       </section>
 
-      <!-- Math (financial formula) -->
+      <!-- Math Equation -->
       <section>
         <h2>Financial Formula</h2>
-        <p>Weighted Average Cost of Capital (WACC):</p>
         <p>
-          \( \displaystyle
-            \mathrm{WACC} \;=\; \frac{E}{V}\,R_e \;+\; \frac{D}{V}\,R_d(1-T)
-          \)
+        \[
+        FV = PV \times (1 + r)^n
+        \]
         </p>
         <aside class="notes">
-          Explain variables: E=Equity, D=Debt, V=E+D, Re=Cost of Equity, Rd=Cost of Debt, T=Tax rate.
+          Explain that FV (Future Value) grows with interest rate and number of periods.
         </aside>
       </section>
 
-      <!-- Slide with background image -->
+      <!-- Background image -->
       <section data-background-image="https://picsum.photos/1200/800">
-        <h2 style="color:white; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">Market Outlook 2025</h2>
-        <aside class="notes">
-          Use this visually for transition between sections.
-        </aside>
-      </section>
-
-      <!-- Closing / Contact slide with email again for verification -->
-      <section>
-        <h2>Next Steps & Contact</h2>
-        <p>Recommendation: expand into new market segments to accelerate growth.</p>
-        <p class="email"><strong>Contact:</strong> 24f1002855@ds.study.iitm.ac.in</p>
-        <aside class="notes">
-          Close with call-to-action and how stakeholders can reach out.
-        </aside>
+        <h2 style="color:white;text-shadow:2px 2px 6px black;">Background Image Example</h2>
       </section>
 
     </div>
   </div>
 
-  <!-- RevealJS core + plugins (CDN) -->
+  <!-- RevealJS and plugins -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
 
   <script>
     Reveal.initialize({
       hash: true,
       slideNumber: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
-      transition: 'slide',
-      // ensure presenter notes panel usable on GitHub Pages
-      keyboard: true
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ],
+      transition: 'slide'
     });
-
-    // Activate highlight.js after Reveal init (safe fallback)
-    if (window.hljs) {
-      document.querySelectorAll('pre code').forEach((block) => {
-        try { hljs.highlightBlock(block); } catch(e) { /* noop */ }
-      });
-    }
   </script>
-
-  <!-- small footer visible on every page (for explicit email presence) -->
-  <footer class="reveal-footer">Contact: 24f1002855@ds.study.iitm.ac.in</footer>
 </body>
 </html>
