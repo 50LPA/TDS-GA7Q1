@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TDS GA7Q1 Presentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- RevealJS core + theme (from CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+
+  <!-- Code highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title slide -->
+      <section>
+        <h1>TDS GA7Q1</h1>
+        <p>24f1002855@ds.study.iitm.ac.in</p>
+      </section>
+
+      <!-- Markdown example -->
+      <section data-markdown>
+        <textarea data-template>
+### Features
+- Easy to maintain in Git
+- Convertible to PDF, PPT, HTML
+- Uses **Reveal.js**
+        </textarea>
+      </section>
+
+      <!-- Math -->
+      <section>
+        <h2>Algorithmic Complexity</h2>
+        <p>
+        \[
+        T(n) = O(n \log n)
+        \]
+        </p>
+      </section>
+
+      <!-- Background image -->
+      <section data-background-image="https://picsum.photos/1200/800">
+        <h2 style="color:white;text-shadow:2px 2px 6px black;">Background Image Example</h2>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- RevealJS and plugins from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ],
+      transition: 'slide'
+    });
+  </script>
+</body>
+</html>
