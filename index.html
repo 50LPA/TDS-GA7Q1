@@ -5,7 +5,7 @@
   <title>Quarterly Earnings — Interactive Deck</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- RevealJS core + themes -->
+  <!-- RevealJS core + themes (CDN full path) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
 
@@ -73,10 +73,17 @@ print((growth * 100).round(2).astype(str) + '%')
         </p>
       </section>
 
+      <!-- Background image slide -->
+      <section data-background-image="https://picsum.photos/1200/800?grayscale">
+        <h2 style="color: white; text-shadow: 2px 2px 4px black;">
+          Market Outlook 2025
+        </h2>
+      </section>
+
     </div>
   </div>
 
-  <!-- RevealJS + Plugins -->
+  <!-- RevealJS + Plugins (CDN full path) -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
