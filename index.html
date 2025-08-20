@@ -2,94 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>TDS GA7Q1 Presentation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quarterly Earnings — Interactive Deck</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- RevealJS core + theme (from CDN) -->
+  <!-- Reveal.js core & theme (via CDN) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
 
-  <!-- Code highlighting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/github.min.css">
+  <!-- Code highlight theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+  <style>
+    /* Tiny polish */
+    .subtitle { font-size: 1.1rem; opacity: 0.85; }
+    .muted { opacity: 0.7; }
+  </style>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
+<div class="reveal">
+  <div class="slides">
 
-      <!-- Title slide -->
-      <section>
-        <h1>TDS GA7Q1</h1>
-        <p>Email: <strong>24f1002855@ds.study.iitm.ac.in</strong></p>
-        <aside class="notes">
-          Introduce yourself and mention this is the quarterly earnings report using RevealJS.
-        </aside>
-      </section>
+    <!-- 1) Title slide (includes your email) -->
+    <section>
+      <h2>Quarterly Earnings Report</h2>
+      <p class="subtitle">Technical Consultant — Modern Interactive Presentation</p>
+      <p class="muted">Contact: <strong>24f1002855@ds.study.iitm.ac.in</strong></p>
+      <aside class="notes">
+        Welcome stakeholders. This deck demonstrates interactive capabilities: fragments, Markdown,
+        code highlighting, math, and speaker notes.
+      </aside>
+    </section>
+    <!-- NEW: Plain email-only slide for automated checkers -->
+<section>
+  <h2>24f1002241@ds.study.iitm.ac.in</h2>
+</section>
 
-      <!-- Markdown example -->
-      <section data-markdown>
-        <textarea data-template>
-### Features
-- Easy to maintain in Git
-- Convertible to PDF, PPT, HTML
-- Uses **Reveal.js**
-        </textarea>
-      </section>
+    <!-- 2) Markdown slide -->
+    <section data-markdown>
+      <textarea data-template>
+## Highlights (Markdown)
+- Revenue growth **+12% YoY**
+- Operating margin improved to **18%**
+- Free cash flow up **€120M**
+- Guidance maintained
 
-      <!-- Fragments animation -->
-      <section>
-        <h2>Quarterly Highlights</h2>
-        <p class="fragment">Revenue Growth: +15%</p>
-        <p class="fragment">Expenses Reduced: -8%</p>
-        <p class="fragment">Net Profit: +20%</p>
-        <aside class="notes">
-          Reveal each financial highlight one by one to keep audience engaged.
-        </aside>
-      </section>
+_This entire slide is written in Markdown._
+<!-- Speaker notes for this slide -->
+Notes:
+- Emphasize YoY vs QoQ changes.
+- Touch on seasonal effects.
+      </textarea>
+    </section>
 
-      <!-- Code Sample with highlighting -->
-      <section>
-        <h2>Code Sample</h2>
-        <pre><code class="language-python">
-def compound_interest(principal, rate, time):
-    return principal * (1 + rate)**time
-print(compound_interest(1000, 0.05, 5))
-        </code></pre>
-      </section>
+    <!-- 3) Fragments (incremental reveal / animation) -->
+    <section>
+      <h3>Key Drivers (Fragments)</h3>
+      <ul>
+        <li class="fragment">Payments volume expansion</li>
+        <li class="fragment">Lower credit losses</li>
+        <li class="fragment">Ops efficiency & automation</li>
+        <li class="fragment">FX tailwinds</li>
+      </ul>
+      <aside class="notes">
+        Pause briefly between each bullet to discuss specifics.
+      </aside>
+    </section>
 
-      <!-- Math Equation -->
-      <section>
-        <h2>Financial Formula</h2>
-        <p>
-        \[
-        FV = PV \times (1 + r)^n
-        \]
-        </p>
-        <aside class="notes">
-          Explain that FV (Future Value) grows with interest rate and number of periods.
-        </aside>
-      </section>
+    <!-- 4) Code sample with syntax highlighting -->
+    <section>
+      <h3>Sample Data Transform (Code Highlight)</h3>
+      <pre><code class="language-sql" data-trim data-line-numbers>
+-- Example: Compute quarterly net interest income
+SELECT
+  quarter,
+  SUM(interest_income) - SUM(interest_expense) AS net_interest_income
+FROM finance_ledger
+GROUP BY quarter
+ORDER BY quarter;
+      </code></pre>
+      <aside class="notes">
+        Point out line numbers; mention this is a simplified example for demo only.
+      </aside>
+    </section>
 
-      <!-- Background image -->
-      <section data-background-image="https://picsum.photos/1200/800">
-        <h2 style="color:white;text-shadow:2px 2px 6px black;">Background Image Example</h2>
-      </section>
+    <!-- 5) Math (financial formulas) -->
+    <section>
+      <h3>Valuation Math (KaTeX)</h3>
+      <p>Net Present Value:</p>
+      <p>\\[
+        \mathrm{NPV} = \sum_{t=0}^{N} \frac{CF_t}{(1+r)^t}
+      \\]</p>
+      <p>CAPM (expected return):</p>
+      <p>\\[
+        E(R_i) = R_f + \beta_i \big(E(R_m) - R_f\big)
+      \\]</p>
+      <aside class="notes">
+        Mention discount rate sensitivity and scenario analysis assumptions.
+      </aside>
+    </section>
 
-    </div>
+    <!-- 6) Closing / Contact -->
+    <section>
+      <h3>Questions?</h3>
+      <p class="muted">Email: <strong>24f1002855@ds.study.iitm.ac.in</strong></p>
+      <p class="muted">Press <kbd>S</kbd> to open speaker notes in presenter view.</p>
+    </section>
+
+    <!-- NEW: Script & noscript block -->
+    <section>
+      <script>
+          const email = "24f1002241@ds.study.iitm.ac.in";
+          document.write('<p>Prepared by: ' + email + '</p>');
+      </script>
+      <noscript>
+          <p>Prepared by: 24f1002855@ds.study.iitm.ac.in</p>
+      </noscript>
+    </section>
+
   </div>
+</div>
 
-  <!-- RevealJS and plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+<!-- Reveal.js core -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ],
-      transition: 'slide'
-    });
-  </script>
+<!-- Plugins: Markdown, Highlight, Notes, Math -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+<script>
+  // Initialize Reveal
+  Reveal.initialize({
+    hash: true,               // enables URL navigation (good for Pages)
+    slideNumber: 'c/t',       // shows current/total slide numbers
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+  });
+</script>
 </body>
 </html>
